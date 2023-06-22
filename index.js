@@ -4,7 +4,7 @@ const express = require('express');
 connectToMongo();
 var app = express()
 var cors = require('cors')
-const port = "i-notebook-api.vercel.app"
+const port = 5000
 
 
 app.use(cors())
