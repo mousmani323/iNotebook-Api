@@ -7,6 +7,12 @@ const User = require("../models/User");
 const fetchuser = require("../middleware/fetchuser")
 
 JWT_SECRET = "kokokaJ@du";
+router.options("*", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.sendStatus(200);
+});
 
 //Route 1 : creating a user using :POST (/api/auth/createUser)
 router.post(
