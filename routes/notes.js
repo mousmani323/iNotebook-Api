@@ -89,7 +89,7 @@ router.put("/updatenote/:id", fetchuser, async (req, res) => {
   }
 });
 
-//Route 4: deleting note  :POST (/api/notes/updatenote)
+//Route 4: deleting note  :DELETE (/api/notes/updatenote)
 
 router.delete("/deletenote/:id", fetchuser, async (req, res) => {
   try {
